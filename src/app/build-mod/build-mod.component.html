@@ -1,0 +1,436 @@
+<div class="flex gap-3">
+  <div class="bg-gray-50 p-3 w-[30%] rounded-lg">
+    <div class="bg-gray-100 flex gap-1 items-center rounded p-2">
+      <img class="w-[21px]" src="./images/b_title.png" alt="title">
+      <h1 class="text-xl font-semibold text-gray-800">{{'build.title' | translate}}</h1>
+    </div>
+    <div class="py-8 ">
+      <span class="flex gap-1 items-center text-sm active">
+        <span class="num-container">
+          1
+        </span>
+        {{'build.selectData' | translate}}
+      </span>
+      <p class="text-sm text-gray-400 w-[90%]">
+        {{'build.description' | translate}}
+      </p>
+    </div>
+    <form>
+      <h6 class="line-before line-after">
+        <fa-icon class="text-gray-400" [icon]="faEye"></fa-icon>
+        {{'build.fieldName' | translate}}
+      </h6>
+      <!--Name-->
+      <div class="flex gap-4 w-full mb-3">
+        <div class="field">
+          <a class="cursor-pointer">
+            <fa-icon class="text-blue-200" [icon]="faGripVertical"></fa-icon>
+          </a>
+          <span class="text-gray-300 p-1 pb-0 rounded-md flex items-center">
+            <fa-icon [icon]="faCircleUser"></fa-icon>
+          </span>
+          <input name="clientName" [(ngModel)]="this.clientName" class="outline-none w-3/4" type="text"
+            placeholder="{{'build.field' | translate}} {{'build.clientName' | translate }}">
+          <a class="edit">
+            <fa-icon class="text-[#3E97FF]" [icon]="faPenToSquare"></fa-icon>
+          </a>
+        </div>
+        <a (click)="showHideEye($event)" (click)="showHideEye($event)" class="bg-gray-100 hover:bg-gray-200 p-1 rounded-md w-[10%] flex justify-center items-center cursor-pointer">
+          <fa-icon class="text-[#3E97FF] eye" [icon]="faEye"></fa-icon>
+          <fa-icon class="text-gray-400 eye-slash hidden" [icon]="faEyeSlash"></fa-icon>
+        </a>
+      </div>
+      <!--phone-->
+      <div class="flex gap-4 w-full mb-3">
+        <div class="field">
+          <a class="cursor-pointer">
+            <fa-icon class="text-blue-200" [icon]="faGripVertical"></fa-icon>
+          </a>
+          <span class="text-gray-200 p-1 pb-0 rounded-md flex items-center">
+            <fa-icon [icon]="faPhoneFlip"></fa-icon>
+          </span>
+          <input name="clientPhone" class="outline-none w-3/4" type="text"
+            placeholder="{{'build.field' | translate}} {{'build.clientPhone' | translate}}">
+          <a class="edit">
+            <fa-icon class="text-[#3E97FF]" [icon]="faPenToSquare"></fa-icon>
+          </a>
+        </div>
+        <a (click)="showHideEye($event)" (click)="showHideEye($event)" (click)="showHideEye($event)" class="bg-gray-100 hover:bg-gray-200 p-1 rounded-md w-[10%] flex justify-center items-center cursor-pointer">
+          <fa-icon class="text-[#3E97FF]" [icon]="faEye"></fa-icon>
+          <fa-icon class="text-gray-400 eye-slash hidden" [icon]="faEyeSlash"></fa-icon>
+        </a>
+      </div>
+      <!--email-->
+      <div class="flex gap-4 w-full mb-3">
+        <div class="field">
+          <a class="cursor-pointer">
+            <fa-icon class="text-blue-200" [icon]="faGripVertical"></fa-icon>
+          </a>
+          <span class="text-gray-200 p-1 pb-0 rounded-md flex items-center">
+            <fa-icon [icon]="faEnvelope"></fa-icon>
+          </span>
+          <input name="clientMail" class="outline-none w-3/4" type="text"
+            placeholder="{{'build.field' | translate}} {{'build.clientMail' | translate}}">
+          <a class="edit">
+            <fa-icon class="text-[#3E97FF]" [icon]="faPenToSquare"></fa-icon>
+          </a>
+        </div>
+        <a class="bg-gray-100 hover:bg-gray-200 p-1 rounded-md w-[10%] flex justify-center items-center cursor-pointer">
+          <fa-icon class="text-[#3E97FF]" [icon]="faEye"></fa-icon>
+          <fa-icon class="text-gray-400 eye-slash hidden" [icon]="faEyeSlash"></fa-icon>
+        </a>
+      </div>
+      <!--products-->
+      <div class="flex gap-4 w-full mb-3">
+        <div class="field relative">
+          <a enif (click)="showPopup()" class="absolute text-[#3E97FF] border border-[#3E97FF] rounded-md left-8 px-2 cursor-pointer">
+            {{'build.productsSelection' | translate}}
+          </a>
+          <a enif (click)="showPopup()" class="absolute text-[#3E97FF] border border-[#3E97FF] rounded-md left-8 px-2 cursor-pointer">
+            {{'build.productsSelection' | translate}}
+          </a>
+          <a class="cursor-pointer">
+            <fa-icon class="text-blue-200" [icon]="faGripVertical"></fa-icon>
+          </a>
+          <span class="text-gray-200 border-gray-200 p-1 pb-0 rounded-md flex items-center">
+            <fa-icon [icon]="faCube"></fa-icon>
+          </span>
+          <input name="productsField" class="outline-none w-3/4" type="text"
+            placeholder="{{'build.field' | translate}} {{'build.productsField' | translate}}">
+          <a class="edit">
+            <fa-icon class="text-[#3E97FF]" [icon]="faPenToSquare"></fa-icon>
+          </a>
+        </div>
+        <a class="bg-gray-100 hover:bg-gray-200 p-1 rounded-md w-[10%] flex justify-center items-center cursor-pointer">
+          <fa-icon class="text-[#3E97FF]" [icon]="faEye"></fa-icon>
+          <fa-icon class="text-gray-400 eye-slash hidden" [icon]="faEyeSlash"></fa-icon>
+        </a>
+      </div>
+      <!--note-->
+      <div class="flex gap-4 w-full mb-3">
+        <div class="field">
+          <a class="cursor-pointer">
+            <fa-icon class="text-blue-200" [icon]="faGripVertical"></fa-icon>
+          </a>
+          <span class="text-gray-200 p-1 pb-0 rounded-md flex items-center">
+            <fa-icon [icon]="faCopy"></fa-icon>
+          </span>
+          <input name="notesField" class="outline-none w-3/4" type="text"
+            placeholder="{{'build.field' | translate}} {{'build.notesField' | translate}}">
+          <a class="edit">
+            <fa-icon class="text-[#3E97FF]" [icon]="faPenToSquare"></fa-icon>
+          </a>
+        </div>
+        <a (click)="showHideEye($event)" class="bg-gray-100 hover:bg-gray-200 p-1 rounded-md w-[10%] flex justify-center items-center cursor-pointer">
+          <fa-icon class="text-[#3E97FF]" [icon]="faEye"></fa-icon>
+          <fa-icon class="text-gray-400 eye-slash hidden" [icon]="faEyeSlash"></fa-icon>
+        </a>
+      </div>
+      <h6 class="line-before line-after">
+        <fa-icon class="text-gray-400" [icon]="faEyeSlash"></fa-icon>
+        {{'build.disapearFilds' | translate}}
+      </h6>
+      <!--custome 1-->
+      <div class="flex gap-4 w-full mb-3">
+        <div class="field">
+          <a class="cursor-pointer">
+            <fa-icon class="text-blue-200" [icon]="faGripVertical"></fa-icon>
+          </a>
+          <span class="text-gray-200 border-gray-200 p-1 pb-0 rounded-md flex items-center">
+            <fa-icon [icon]="faPen"></fa-icon>
+          </span>
+          <input name="productsField" class="outline-none w-3/4" type="text"
+            placeholder="{{'build.customeField' | translate}} 1">
+          <a class="edit">
+            <fa-icon class="text-[#3E97FF]" [icon]="faPenToSquare"></fa-icon>
+          </a>
+        </div>
+        <a (click)="showHideEye($event)" class="bg-gray-100 hover:bg-gray-200 p-1 rounded-md w-[10%] flex justify-center items-center cursor-pointer">
+          <fa-icon class="text-[#3E97FF] eye hidden" [icon]="faEye"></fa-icon>
+          <fa-icon class="text-gray-400 eye-slash" [icon]="faEyeSlash"></fa-icon>
+        </a>
+      </div>
+      <!--custome 2-->
+      <div class="flex gap-4 w-full mb-3">
+        <div class="field">
+          <a class="cursor-pointer">
+            <fa-icon class="text-blue-200" [icon]="faGripVertical"></fa-icon>
+          </a>
+          <span class="text-gray-200 border-gray-200 p-1 pb-0 rounded-md flex items-center">
+            <fa-icon [icon]="faPen"></fa-icon>
+          </span>
+          <input name="productsField" class="outline-none w-3/4" type="text"
+            placeholder="{{'build.customeField' | translate}} 1">
+          <a class="edit">
+            <fa-icon class="text-[#3E97FF]" [icon]="faPenToSquare"></fa-icon>
+          </a>
+        </div>
+        <a (click)="showHideEye($event)" class="bg-gray-100 hover:bg-gray-200 p-1 rounded-md w-[10%] flex justify-center items-center cursor-pointer">
+          <fa-icon class="text-[#3E97FF] eye hidden" [icon]="faEye"></fa-icon>
+          <fa-icon class="text-gray-400 eye-slash" [icon]="faEyeSlash"></fa-icon>
+        </a>
+      </div>
+      <!--custome 3-->
+      <div class="flex gap-4 w-full mb-3">
+        <div class="field">
+          <a class="cursor-pointer">
+            <fa-icon class="text-blue-200" [icon]="faGripVertical"></fa-icon>
+          </a>
+          <span class="text-gray-200 border-gray-200 p-1 pb-0 rounded-md flex items-center">
+            <fa-icon [icon]="faPen"></fa-icon>
+          </span>
+          <input name="productsField" class="outline-none w-3/4" type="text"
+            placeholder="{{'build.customeField' | translate}} 1">
+          <a class="edit">
+            <fa-icon class="text-[#3E97FF]" [icon]="faPenToSquare"></fa-icon>
+          </a>
+        </div>
+        <a (click)="showHideEye($event)" class="bg-gray-100 hover:bg-gray-200 p-1 rounded-md w-[10%] flex justify-center items-center cursor-pointer">
+          <fa-icon class="text-[#3E97FF] eye hidden" [icon]="faEye"></fa-icon>
+          <fa-icon class="text-gray-400 eye-slash" [icon]="faEyeSlash"></fa-icon>
+        </a>
+      </div>
+      <!--next Step -->
+      <div class="mt-10 flex justify-end">
+        <a class="text-white bg-[#3E97FF] rounded-md py-2 px-4">
+          {{"build.nextStep" | translate}}
+        </a>
+      </div>
+      <!--Popup-->
+      <div id="popup" class="popup">
+        <div class="w-[25%] h-[65%] bg-white rounded-md overflow-hidden py-5">
+          <!-- title -->
+          <div class="flex justify-between items-center px-5 mb-2">
+            <h2 class="text-base font-bold flex items-center gap-1">
+              <img class="w-6 h-6" src="./images/cube.png" alt="cube">
+              {{'build.popupTitle' | translate}}
+            </h2>
+            <a (click)="hidePopup()" class="cursor-pointer bg-gray-100 rounded-md px-3 py-1 hover:bg-gray-200 active:bg-gray-300">
+              <fa-icon class="text-gray-900 text-xs" [icon]="faX"></fa-icon>
+            </a>
+          </div>
+          <hr>
+          <ul class="flex flex-col list-none gap-4 pt-4 overflow-y-auto">
+            <li class="product active flex justify-between rounded p-5">
+              <label class="flex gap-4 items-center" for="check">
+                <div class="w-[20%]">
+                  <img class="w-[60px]" src="./images/laptop.png" alt="laptop">
+                </div>
+                <div class="flex flex-col gap-2 text-xs text-gray-400">
+                  <span class="font-semibold text-gray-800">
+                    {{'build.laptop' | translate}}
+                    <span class="text-[10px] font-normal text-green-400 bg-green-100 p-1 rounded-md">
+                      {{'build.available' | translate}}
+                    </span>
+                  </span>
+                  <div class="flex gap-10">
+                    <div class="flex flex-col gap-2">
+                      <span>
+                        {{'build.price' | translate}}
+                      </span>
+                      <span class="text-gray-800 border-r ps-3 border-[#3E97FF]">
+                        1,000,000
+                      </span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <span>
+                        {{'build.quantity' | translate}}
+                      </span>
+                      <span class="text-gray-800 border-r ps-3 border-[#3E97FF]">
+                        45
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </label>
+              <div class="flex flex-col gap-2">
+                <input id="check" type="checkbox">
+              </div>
+            </li>
+            <li class="active flex justify-between rounded p-5">
+              <label class="flex gap-4 items-center" for="check">
+                <div class="w-[20%]">
+                  <img class="w-[60px]" src="./images/laptop.png" alt="laptop">
+                </div>
+                <div class="flex flex-col gap-2 text-xs text-gray-400">
+                  <span class="font-semibold text-gray-800">
+                    {{'build.laptop' | translate}}
+                    <span class="text-[10px] font-normal text-green-400 bg-green-100 p-1 rounded-md">
+                      {{'build.available' | translate}}
+                    </span>
+                  </span>
+                  <div class="flex gap-10">
+                    <div class="flex flex-col gap-2">
+                      <span>
+                        {{'build.price' | translate}}
+                      </span>
+                      <span class="text-gray-800 border-r ps-3 border-[#3E97FF]">
+                        1,000,000
+                      </span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <span>
+                        {{'build.quantity' | translate}}
+                      </span>
+                      <span class="text-gray-800 border-r ps-3 border-[#3E97FF]">
+                        45
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </label>
+              <div class="flex flex-col gap-2">
+                <input id="check" type="checkbox">
+              </div>
+            </li>
+            <li class="active flex justify-between rounded p-5">
+              <label class="flex gap-4 items-center" for="check">
+                <div class="w-[20%]">
+                  <img class="w-[60px]" src="./images/laptop.png" alt="laptop">
+                </div>
+                <div class="flex flex-col gap-2 text-xs text-gray-400">
+                  <span class="font-semibold text-gray-800">
+                    {{'build.laptop' | translate}}
+                    <span class="text-[10px] font-normal text-green-400 bg-green-100 p-1 rounded-md">
+                      {{'build.available' | translate}}
+                    </span>
+                  </span>
+                  <div class="flex gap-10">
+                    <div class="flex flex-col gap-2">
+                      <span>
+                        {{'build.price' | translate}}
+                      </span>
+                      <span class="text-gray-800 border-r ps-3 border-[#3E97FF]">
+                        1,000,000
+                      </span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <span>
+                        {{'build.quantity' | translate}}
+                      </span>
+                      <span class="text-gray-800 border-r ps-3 border-[#3E97FF]">
+                        45
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </label>
+              <div class="flex flex-col gap-2">
+                <input id="check" type="checkbox">
+              </div>
+            </li>
+            <li class="active flex justify-between rounded p-5">
+              <label class="flex gap-4 items-center" for="check">
+                <div class="w-[20%]">
+                  <img class="w-[60px]" src="./images/laptop.png" alt="laptop">
+                </div>
+                <div class="flex flex-col gap-2 text-xs text-gray-400">
+                  <span class="font-semibold text-gray-800">
+                    {{'build.laptop' | translate}}
+                    <span class="text-[10px] font-normal text-green-400 bg-green-100 p-1 rounded-md">
+                      {{'build.available' | translate}}
+                    </span>
+                  </span>
+                  <div class="flex gap-10">
+                    <div class="flex flex-col gap-2">
+                      <span>
+                        {{'build.price' | translate}}
+                      </span>
+                      <span class="text-gray-800 border-r ps-3 border-[#3E97FF]">
+                        1,000,000
+                      </span>
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <span>
+                        {{'build.quantity' | translate}}
+                      </span>
+                      <span class="text-gray-800 border-r ps-3 border-[#3E97FF]">
+                        45
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </label>
+              <div class="flex flex-col gap-2">
+                <input id="check" type="checkbox">
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="w-[70%]">
+    <ul class="bg-white p-3 w-full rounded-lg flex justify-around gap-1 px-20 items-center list-none">
+      <li class="active">
+        <span class="num-container">
+          1
+        </span>
+        {{'build.selectData' | translate}}
+      </li>
+      <li class="text-gray-400">
+        <span class="num-container">
+          2
+        </span>
+        {{'build.addHead&Logo' | translate}}
+      </li>
+      <li class="text-gray-400">
+        <span class="num-container">
+          3
+        </span>
+        {{'build.customizeColors&Apearnce' | translate}}
+      </li>
+      <li class="text-gray-400">
+        <span class="num-container">
+          4
+        </span>
+        {{'build.finalLook' | translate}}
+      </li>
+    </ul>
+    <form
+      class="bg-gray-50 mx-auto w-[65%] h-[572px] overflow-y-auto mt-6 border border-sky-200 rounded-md flex flex-col gap-3 pt-5 pb-8 px-12">
+      <div class="bg-white border border-sky-200 rounded-md px-16 py-5">
+        <label for="clientName" class="text-gray-800 flex gap-1">
+          <fa-icon class="text-gray-500" [icon]="faCircleUser"></fa-icon>
+          {{'build.clientName' | translate}}
+        </label>
+        <input name="clientName1" class="border border-gray-300 rounded-md p-1 w-full" type="text" id="clientName"
+          placeholder="{{'build.canClientName' | translate}}">
+      </div>
+      <div class="bg-white border border-sky-200 rounded-md px-16 py-5">
+        <label for="clientPhone" class="text-gray-800 flex gap-1">
+          <fa-icon class="text-gray-500" [icon]="faPhone"></fa-icon>
+          {{'build.clientPhone' | translate}}
+        </label>
+        <input name="clientPhone1" class="border border-gray-300 rounded-md p-1 w-full" type="text" id="clientPhone"
+          placeholder="00000000000">
+      </div>
+      <div class="bg-white border border-sky-200 rounded-md px-16 py-5">
+        <label for="clientMail" class="text-gray-800 flex gap-1">
+          <fa-icon class="text-gray-500" [icon]="faEnvelope"></fa-icon>
+          {{'build.clientMail' | translate}}
+        </label>
+        <input name="clientMail1" class="border border-gray-300 rounded-md p-1 w-full" type="email" id="clientMail"
+          placeholder="{{'build.canEmail' | translate}}">
+      </div>
+      <div class="bg-white border border-sky-200 rounded-md px-16 py-5">
+        <label for="clientName" class="text-gray-800 flex gap-1">
+          <fa-icon class="text-gray-500" [icon]="faCube"></fa-icon>
+          {{'build.productsField' | translate}}
+        </label>
+        <select name="clientProduct1" class="border text-gray-400 border-gray-300 rounded-md p-1 w-full"
+          id="clientProduct">
+          <option value="">{{'build.canPeoducts' | translate}}</option>
+        </select>
+      </div>
+      <div class="bg-white border border-sky-200 rounded-md px-16 py-5">
+        <label for="clientNotes" class="text-gray-800 flex gap-1">
+          <fa-icon class="text-gray-500" [icon]="faCopy"></fa-icon>
+          {{'build.notesField' | translate}}
+        </label>
+        <textarea name="clientNotes1" class="border border-gray-300 rounded-md p-1 w-full" id="clientNotes"
+          placeholder="{{'build.canNotes' | translate}}"></textarea>
+      </div>
+    </form>
+  </div>
+</div>

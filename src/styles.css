@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-100 min-h-screen;
+  font-family: 'Neo Sans Arabic', sans-serif;
+}
+
+a {
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+ul li {
+@apply flex items-center gap-2;
+}
+
+.line-before,
+.line-after {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem !important;
+  margin-bottom: 1rem;
+}
+
+.line-before::before,
+.line-after::after {
+  flex: 1;
+  content: "";
+  height: 1px;
+  @apply bg-gray-200;
+}

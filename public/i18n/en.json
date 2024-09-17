@@ -1,0 +1,31 @@
+{
+  "language": "Choose your language",
+  "build": {
+    "title": "Build Probability Model",
+    "selectData": "Select Data",
+    "description": "Start by selecting the data you want to add to the model you want to add to the model you want to add to the model",
+    "fieldName": "Visible Fields",
+    "field": "field",
+    "clientName": "Client Name",
+    "clientPhone": "Client Phone",
+    "clientMail": "Client Email",
+    "productsField": "Products",
+    "productsSelection": "Select Products",
+    "notesField": "Notes",
+    "addHead&Logo": "Add Header and Logo",
+    "customizeColors&Apearnce": "Customize Colors and Appearance",
+    "finalLook": "Final Look",
+    "canClientName": "You can write the client name here",
+    "canEmail": "You can write the email here",
+    "canPeoducts": "You can select products from here",
+    "canNotes": "Write your notes here",
+    "disapearFilds": "Hidden Fields",
+    "customeField": "Custom Field",
+    "nextStep": "Next Step",
+    "popupTitle": "Products",
+    "laptop": "Dell Laptop 128 GB",
+    "price": "Price",
+    "quantity": "Available Quantity",
+    "available": "Available"
+  }
+}

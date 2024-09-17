@@ -1,0 +1,38 @@
+.field {
+  @apply bg-white border border-gray-300 rounded-md px-2 py-1 flex items-center justify-between gap-2 shadow-md w-[90%];
+}
+
+.num-container {
+  @apply rounded-full w-5 h-5 text-gray-400 border border-gray-300 text-xs flex items-center justify-center;
+}
+
+.active {
+  @apply text-[#3E97FF];
+}
+
+.active .num-container {
+@apply text-white bg-[#3E97FF] border border-[#3E97FF];
+}
+
+.field .edit {
+  opacity: 0;
+  cursor: pointer;
+
+}
+
+.field:hover .edit {
+  opacity: 1;
+}
+
+.product.active {
+  @apply bg-blue-50;
+}
+
+.popup {
+  @apply fixed w-full h-full bg-[#0007] top-0 left-0 items-center justify-center;
+  display: none;
+}
+
+.popup.show{
+  display: flex;
+}

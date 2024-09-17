@@ -1,0 +1,31 @@
+{
+  "language": "اختر لغتك",
+  "build": {
+    "title": "بناء نموذج الأحتمالية",
+    "selectData": "إختيار البيانات",
+    "description": "إبدا بإختيار البيانات التى تريد  ان تضيفها إلى النموذج  ان تضيفها إلى النموذج  ان تضيفها إلى النموذج ",
+    "fieldName": "الحقول الظاهرة",
+    "field": "حقل",
+    "clientName": "أسم العميل",
+    "clientPhone": "رقم الهاتف",
+    "clientMail": "البريد الألكتروني",
+    "productsField": "المنتجات",
+    "productsSelection": "تحديد المنتجات",
+    "notesField": "الملاحظات",
+    "addHead&Logo": "إضافة الرأس والشعار",
+    "customizeColors&Apearnce": "تخصيص الألوان والمظهر",
+    "finalLook": "العرض النهائي",
+    "canClientName": "يمكنك كتابة إسم العميل هنا",
+    "canEmail": "يمكنك كتابة البريد الألكتروني هنا",
+    "canPeoducts": "يمكنك تحديد المنتجات من هنا",
+    "canNotes": "اكتب هنا ملاحظاتك",
+    "disapearFilds": "الحقول المخفية",
+    "customeField": "حقل مخصص",
+    "nextStep": "الخطوة التالية",
+    "popupTitle": "المنتجات",
+    "laptop": "لابتوب ديل 128 جيجا",
+    "price": "السعر",
+    "quantity": "الكمية التوفره",
+    "available": "متوفر"
+  }
+}

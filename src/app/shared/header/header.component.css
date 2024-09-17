@@ -1,0 +1,23 @@
+nav {
+  @apply absolute top-4 bottom-4;
+}
+
+nav.en {
+  @apply left-4;
+}
+
+nav.ar {
+  @apply right-4;
+}
+
+.link-bar {
+  @apply rounded-md absolute top-[16px] min-w-[93vw] bg-white h-12 flex items-center justify-center;
+}
+
+.link-bar.en {
+  @apply right-4;
+}
+
+.link-bar.ar {
+  @apply left-4;
+}

@@ -1,0 +1,45 @@
+.container {
+  @apply mx-auto ps-20 pt-[4.5rem] pe-4;
+}
+
+@media (min-width: 2000px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 2000px) {
+  .container {
+    max-width: 1921px;
+  }
+}
+
+@media (max-width: 1800px) {
+  .container {
+    max-width: 1729px;
+  }
+}
+
+@media (max-width: 1600px) {
+  .container {
+    max-width: 89.2rem;
+  }
+}
+
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1345px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 953px;
+  }
+}
